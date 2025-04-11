@@ -1,98 +1,135 @@
-
-.wheel {
-    border: 2px solid black;
-    border-radius: 50%;
-    margin-left: 50%;
-    position: absolute;
-    width: 55vw;
-    height: 55vw;
-    max-width: 500px;
-    max-height: 500px;
-    animation-name: wheel;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.line {
-    background-color: black;
+.main {
+    width: 100%;
+    background: url('https://www.monash.edu/__data/assets/image/0010/3328723/varieties/banner.static.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    font-family: sans-seriff;
+}
+
+.navbar {
+    width: 95%;
+    height: auto;
+    margin-left: 30px;
+}
+
+.logo {
+    color: darkgrey;
+    font-size: 40px;
+    font-family: cursive;
+    float: left;
+    padding-top: .6%;
+    cursor: pointer;
+}
+
+.menu {
+    width: 600px;
+    float: left;
+    height: 70px;
+}
+
+ul {
+    float: left;
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 14%;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 60px;
+    font-size: 16px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: .3s ease;
+}
+
+ul li a:hover {
+    color: skyblue;
+
+}
+
+.search-box {
+    float: right;
+    width: 240px;
+    background: #fff;
+    height: 30px;
+    padding: 8px;
+    border-radius: 15px;
+    margin-top: 1%;
+    margin-right: 2%;
+}
+
+.search-box .search-text{
+    width: 190px;
+    padding: 0 6px;
+
+}
+
+.search-btn {
+    text-decoration: none;
+    background: #fff;
+    color: #000;
+    display: flex;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.search-text {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    color: #000;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: .6px;
+}
+.title {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    width: 50%;
-    height: 2px;
-    transform-origin: 0% 0%;
+    transform: translate(-50%, -50%);
 }
 
-.line:nth-of-type(2) {
-    transform: rotate(60deg);
-}
-.line:nth-of-type(3) {
-    transform: rotate(120deg);
-}
-.line:nth-of-type(4) {
-    transform: rotate(180deg);
-}
-.line:nth-of-type(5) {
-    transform: rotate(240deg);
-}
-.line:nth-of-type(6) {
-    transform: rotate(300deg);
+.title h1 {
+    cursor: pointer;
+    font-family: cursive;
+    color: #fff;
+    font-size: 85px;
 }
 
-.cabin {
-    background-color: red;
-    border: 2px solid;
+.button {
     position: absolute;
-    width: 20%;
-    height: 20%;
-    transform-origin: 50% 0%;
-    animation: cabin 10s ease-in-out infinite;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn {
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    transition: .3 ease;
 }
 
-.cabin:nth-of-type(1) {
-    right: -8.5%;
-    top: 50%;
-}.cabin:nth-of-type(2) {
-    right: 17%;
-    top: 93.5%;
-}.cabin:nth-of-type(3) {
-    right: 67%;
-    top: 93.5%;
-}.cabin:nth-of-type(4) {
-    left: -8.5%;
-    top: 50%;
-}.cabin:nth-of-type(5) {
-    left: 17%;
-    top: 7%;
-}.cabin:nth-of-type(6) {
-    right: 17%;
-    top: 7%;
-}
-
-@keyframes wheel {
-    0%{
-        transform: rotate(0deg)
-    }
-    100%{
-        transform: rotate(360deg)
-    }
-}
-
-@keyframes cabin {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        background-color: yellow;
-    }
-    50% {
-        background-color: purple;
-    }
-    75% {
-        background-color: yellow;
-    }
-    100%{
-        transform: rotate(-360deg);
-    }
+.btn:hover {
+    background-color: #fff;
+    color: #000;
 }
